@@ -31,6 +31,10 @@ $danger--color: rgb(234, 67, 53);
       color: #fff;
     }
   }
+  &--hollow {
+    border:none;
+    background-color: #fff;
+  }
   &--round {
     border-radius: 80px;
   }
