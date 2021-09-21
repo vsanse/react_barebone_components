@@ -57,7 +57,7 @@ export default function App() {
       <div className="App__grid2">
         <div>
           <p className="App__demoTitle">Dropdown</p>
-          <Dropdown options={DATA} defaultOption={0} />,
+          <Dropdown options={DATA} defaultOption={0} />
         </div>
         <div>
           <p className="App__demoTitle">Dropdown Autosuggest</p>
