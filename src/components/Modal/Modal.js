@@ -1,8 +1,8 @@
 import React from "react";
 import "./Modal.scss";
-const Modal = ({ visible, onClose, width, children }) => {
+const Modal = ({ visible, onClose, width, children, ...rest }) => {
   return (
-    <div className={`modalContainer ${visible ? "active" : ""}`}>
+    <div className={`modalContainer ${visible ? "active" : ""}`} {...rest}>
       {visible && (
         <>
           <div className="modal__content" style={{ width: width }}>

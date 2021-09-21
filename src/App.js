@@ -33,10 +33,14 @@ export default function App() {
         </Button>
       </div>
       <div className="App__grid2">
-        <Button type="primary" onClick={() => setShowModal(true)}>
+        <Button type="primary" onClick={() => setShowModal(true)} shape="round">
           Open Modal
         </Button>
-        <Button type="primary" onClick={() => setShowModalLoading(true)}>
+        <Button
+          type="primary"
+          onClick={() => setShowModalLoading(true)}
+          shape="round"
+        >
           Open Modal With Loading
         </Button>
         <Modal
