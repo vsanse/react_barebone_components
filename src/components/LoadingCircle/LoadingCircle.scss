@@ -1,0 +1,24 @@
+.app__loadingCircle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+  border-width: 3px;
+  border-style: solid;
+  border-bottom-color: rgb(66, 133, 244);
+  border-left-color: rgb(234, 67, 53);
+  border-top-color: rgb(52, 168, 83);
+  border-right-color: rgb(251, 188, 4);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    border-width: 25px;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

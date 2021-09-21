@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.App {
+  text-align: center;
+  padding: 16px;
+}
+.App__grid2 {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.App__demoTitle {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,51 @@
+.autosuggest {
+  &__wrapper {
+    cursor: pointer;
+    min-width: 150px;
+    min-height: 40px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid orange;
+      border-bottom: 2px solid orange;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      transform: rotate(45deg);
+    }
+    input {
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      outline: none;
+      padding: 12px 20px 12px 12px;
+      border-radius: 4px;
+    }
+  }
+  &__itemsList {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    left: 0;
+    li {
+      padding: 6px 10px;
+      cursor: pointer;
+      text-align: left;
+      &.active,
+      &:hover {
+        background: #ececec;
+      }
+    }
+  }
+}
