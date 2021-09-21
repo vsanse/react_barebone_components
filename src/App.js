@@ -6,7 +6,15 @@ import LoadingCircle from "./components/LoadingCircle/LoadingCircle";
 import Modal from "./components/Modal/Modal";
 import "./styles.scss";
 
-const DATA = ["Delhi", "Dehradun", "Karnatka", "Kolkata", "Chennai", "Kanpur"];
+const DATA = [
+  "Delhi",
+  "Dwarka",
+  "Dehradun",
+  "Karnatka",
+  "Kolkata",
+  "Chennai",
+  "Kanpur"
+];
 export default function App() {
   const [showModal, setShowModal] = React.useState(false);
   const [showModalLoading, setShowModalLoading] = React.useState(false);
