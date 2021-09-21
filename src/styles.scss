@@ -5,7 +5,9 @@
   font-family: sans-serif;
 }
 .App {
-  padding: 10px
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .App__grid2 {
   display: grid;
