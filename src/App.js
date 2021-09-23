@@ -32,6 +32,22 @@ export default function App() {
   }, [showSpinner]);
   return (
     <div className="App">
+      <div className="App__Section">
+        <p className="App__Section--title">Get the code from</p>
+        <a
+          href="https://codesandbox.io/s/react-barebone-components-zvvw1?file=/src/App.js"
+          target="__blank"
+        >
+          Codesandbox
+        </a>
+        <span className="App__demoTitle marginLR8">or</span>
+        <a
+          href="https://github.com/vsanse/react_barebone_components"
+          target="__blank"
+        >
+          Github
+        </a>
+      </div>
       {/* Buttons */}
       <div className="App__Section">
         <p className="App__Section--title">Buttons</p>

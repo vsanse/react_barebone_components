@@ -9,6 +9,15 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.marginLR8 {
+  margin-left: 8px;
+  margin-right: 8px
+}
+a {
+  color: #4285f4;
+  font-size: 14px;
+  font-weight: 700;
+}
 .App__grid2 {
   display: grid;
   gap: 10px;
