@@ -1,9 +1,13 @@
 import React from "react";
 import AutoSuggest from "./components/AutoSuggest/AutoSuggest";
 import Button from "./components/Button/Button";
+import Checkbox from "./components/Checkbox/Checkbox";
 import Dropdown from "./components/Dropdown/Dropdown";
 import LoadingCircle from "./components/LoadingCircle/LoadingCircle";
 import Modal from "./components/Modal/Modal";
+import Radio from "./components/Radio/Radio";
+import Spinner from "./components/Spinner/Spinner";
+import Switch from "./components/Switch/Switch";
 import "./styles.scss";
 
 const DATA = [
@@ -18,8 +22,17 @@ const DATA = [
 export default function App() {
   const [showModal, setShowModal] = React.useState(false);
   const [showModalLoading, setShowModalLoading] = React.useState(false);
+  const [showSpinner, setShowSpinner] = React.useState(false);
+  React.useEffect(() => {
+    if (showSpinner) {
+      setTimeout(() => {
+        setShowSpinner(false);
+      }, 2000);
+    }
+  }, [showSpinner]);
   return (
     <div className="App">
+      {/* Buttons */}
       <div className="App__Section">
         <p className="App__Section--title">Buttons</p>
         <div className="App__grid2">
@@ -41,6 +54,7 @@ export default function App() {
           </Button>
         </div>
       </div>
+      {/* Modals */}
       <div className="App__Section">
         <p className="App__Section--title">Modals</p>
         <div className="App__grid2">
@@ -74,6 +88,7 @@ export default function App() {
           </Modal>
         </div>
       </div>
+      {/* Select */}
       <div className="App__Section">
         <p className="App__Section--title">Select</p>
         <div className="App__grid2">
@@ -84,6 +99,79 @@ export default function App() {
           <div>
             <p className="App__demoTitle">Dropdown Autosuggest</p>
             <AutoSuggest options={DATA} defaultOption={0} autoFocus={true} />
+          </div>
+        </div>
+      </div>
+      {/* Spinner */}
+      <div className="App__Section">
+        <p className="App__Section--title">Spinner</p>
+        <div className="App__grid2">
+          <div>
+            <p className="App__demoTitle">Default</p>
+            <Spinner loading={showSpinner}>
+              <div className="App__dummyCard">
+                <Button
+                  onClick={() => {
+                    setShowSpinner(true);
+                  }}
+                >
+                  Show Spinner
+                </Button>
+              </div>
+            </Spinner>
+          </div>
+          <div>
+            <p className="App__demoTitle">With Custom Spinner</p>
+            <Spinner loading={showSpinner} CustomSpinner={LoadingCircle}>
+              <div className="App__dummyCard">
+                <Button
+                  onClick={() => {
+                    setShowSpinner(true);
+                  }}
+                >
+                  Show Spinner
+                </Button>
+              </div>
+            </Spinner>
+          </div>
+        </div>
+      </div>
+      {/* Switch */}
+      <div className="App__Section">
+        <p className="App__Section--title">Inputs</p>
+        <div className="App__grid2">
+          <div>
+            <p className="App__demoTitle">Switch</p>
+            <Switch
+              onChange={(isChecked) => console.log(isChecked)}
+              defaultValue={true}
+            />
+          </div>
+          <div>
+            <p className="App__demoTitle">Checkbox</p>
+            <Checkbox
+              id="sample"
+              onChange={(isChecked) => console.log("checkbox", isChecked)}
+            >
+              Sample Checkbox
+            </Checkbox>
+          </div>
+          <div>
+            <p className="App__demoTitle">Radio</p>
+            <Radio
+              name="radio_group"
+              id="sample_radio"
+              onChange={(isChecked) => console.log("radio", isChecked)}
+            >
+              Sample Radio&nbsp;
+            </Radio>
+            <Radio
+              name="radio_group"
+              id="sample_radio2"
+              onChange={(isChecked) => console.log("radio", isChecked)}
+            >
+              Sample Radio 2
+            </Radio>
           </div>
         </div>
       </div>

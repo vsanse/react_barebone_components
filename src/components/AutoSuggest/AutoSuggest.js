@@ -1,4 +1,5 @@
 import React from "react";
+import useOutsideClick from "../../hooks/useOutsideClick";
 import "./AutoSuggest.scss";
 const AutoSuggest = ({ options, defaultOption, autoFocus }) => {
   const [showDropdown, setShowDropdown] = React.useState(false);
@@ -7,6 +8,12 @@ const AutoSuggest = ({ options, defaultOption, autoFocus }) => {
   );
   const [renderedOptions, setRenderedOptions] = React.useState(options);
   const [cursor, setCursor] = React.useState(-1);
+  const ref = React.useRef();
+  useOutsideClick(ref, () => {
+    if (showDropdown) {
+      setShowDropdown(false);
+    }
+  });
   const toggleShowDropdown = () => {
     setShowDropdown((prev) => !prev);
   };
@@ -39,8 +46,9 @@ const AutoSuggest = ({ options, defaultOption, autoFocus }) => {
     if (evt.key === "ArrowUp" && cursor > 0) {
       setCursor((c) => c - 1);
     }
-    if (evt.key === "ArrowDown" && cursor < renderedOptions.length - 1) {
-      setCursor((c) => c + 1);
+    if (evt.key === "ArrowDown") {
+      cursor < renderedOptions.length - 1 && setCursor((c) => c + 1);
+      !showDropdown && toggleShowDropdown(true);
     }
     if (evt.key === "Enter") {
       setSelectedOption(renderedOptions[cursor]);
@@ -48,7 +56,11 @@ const AutoSuggest = ({ options, defaultOption, autoFocus }) => {
     }
   };
   return (
-    <div className="autosuggest__wrapper" onClick={toggleShowDropdown}>
+    <div
+      className="autosuggest__wrapper"
+      onClick={toggleShowDropdown}
+      ref={ref}
+    >
       <input
         type="text"
         value={selectedOption}

@@ -1,0 +1,33 @@
+.app__spinner {
+  position: relative;
+  &--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--overlaySpinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: spinn 1.5s linear infinite;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(66, 133, 244);
+    border-left-color: transparent;
+  }
+}
+@keyframes spinn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

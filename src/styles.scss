@@ -17,7 +17,7 @@
 .App__Section {
   margin-top: 20px;
   padding: 16px;
-  background: #ededed;
+  background: #fefefe;
   border-radius: 4px;
   border: 1px solid #9b9b9b;
   &--title{
@@ -32,4 +32,15 @@
   color: #9b9b9b;
   font-size: 14px;
   font-style: italic;
+}
+.App__dummyCard {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
