@@ -1,0 +1,50 @@
+.app__toast {
+  background-color: rgba($color: #000000, $alpha: 0.75);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 100px;
+  text-align: center;
+  position: fixed;
+  &.bottomCenter,
+  &.topCenter {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% + 20px));
+    transition: transform 0.3s ease-in;
+    &.visible {
+      transition: transform 0.3s ease-out;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  &.topCenter  {
+    transform: translateX(-50%) translateY(calc(-100% - 20px));
+  }
+  &.bottomLeft,
+  &.topLeft {
+    bottom: 20px;
+    left: 20px;
+    transform: translateX(calc(-100% - 20px));
+    transition: transform 0.3s ease-in;
+    &.visible {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0);
+    }
+  }
+  &.bottomRight,
+  &.topRight {
+    bottom: 20px;
+    right: 20px;
+    transform: translateX(calc(100% + 20px));
+    transition: transform 0.3s ease-in;
+    &.visible {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0);
+    }
+  }
+  &.topRight,
+  &.topLeft,
+  &.topCenter {
+    bottom: auto;
+    top: 20px;
+  }
+}

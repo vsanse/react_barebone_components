@@ -8,7 +8,10 @@ import Modal from "./components/Modal/Modal";
 import Radio from "./components/Radio/Radio";
 import Spinner from "./components/Spinner/Spinner";
 import Switch from "./components/Switch/Switch";
+import Toast from "./components/Toast/Toast";
 import "./styles.scss";
+import "./demos/demo.scss";
+import ToastDemo from "./demos/ToastDemo";
 
 const DATA = [
   "Delhi",
@@ -191,6 +194,8 @@ export default function App() {
           </div>
         </div>
       </div>
+      {/* Toasts */}
+      <ToastDemo />
     </div>
   );
 }

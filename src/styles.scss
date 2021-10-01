@@ -23,6 +23,11 @@ a {
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
 }
+.App__grid3 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
 .App__Section {
   margin-top: 20px;
   padding: 16px;
