@@ -1,0 +1,47 @@
+import React from "react";
+import Checkbox from "../components/Checkbox/Checkbox";
+import Radio from "../components/Radio/Radio";
+import Switch from "../components/Switch/Switch";
+
+export default function InputsDemo() {
+  return (
+    <div className="App__Section">
+      <p className="App__Section--title">Inputs</p>
+      <div className="App__grid2">
+        <div>
+          <p className="App__demoTitle">Switch</p>
+          <Switch
+            onChange={(isChecked) => console.log(isChecked)}
+            defaultValue={true}
+          />
+        </div>
+        <div>
+          <p className="App__demoTitle">Checkbox</p>
+          <Checkbox
+            id="sample"
+            onChange={(isChecked) => console.log("checkbox", isChecked)}
+          >
+            Sample Checkbox
+          </Checkbox>
+        </div>
+        <div>
+          <p className="App__demoTitle">Radio</p>
+          <Radio
+            name="radio_group"
+            id="sample_radio"
+            onChange={(isChecked) => console.log("radio", isChecked)}
+          >
+            Sample Radio&nbsp;
+          </Radio>
+          <Radio
+            name="radio_group"
+            id="sample_radio2"
+            onChange={(isChecked) => console.log("radio", isChecked)}
+          >
+            Sample Radio 2
+          </Radio>
+        </div>
+      </div>
+    </div>
+  );
+}
