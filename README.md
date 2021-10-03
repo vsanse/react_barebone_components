@@ -1,6 +1,6 @@
 # react_barebone_components
 
-The only react library you can use as your own and edit to your heart's extent.
+The only react library you can use as your own and edit to your heart's content.
 
 ## How to use
 
