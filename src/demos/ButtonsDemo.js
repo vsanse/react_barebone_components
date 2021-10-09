@@ -26,7 +26,7 @@ export default function ButtonsDemo() {
         <RippleButton type="primary" shape="round">
           Ripple Button
         </RippleButton>
-        <RippleButton type="hollow" shape="round" onClick={() => console.log(1)}>
+        <RippleButton type="hollow" shape="round">
           Ripple Button
         </RippleButton>
       </div>
