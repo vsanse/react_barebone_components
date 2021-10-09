@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./InputField.scss";
 
-const InputField = ({ error, onChange, placeholder, value }) => {
+const InputField = ({ error, onChange, placeholder, value, type,name }) => {
 
     const [ labelStyles, setLabelStyles ] = useState({ bottom: "12px", opacity: 0.8, color: "grey" });
 
@@ -26,6 +26,8 @@ const InputField = ({ error, onChange, placeholder, value }) => {
             onChange={ onChange } 
             value={ value } 
             style={{ borderBottom:  error && !value ? "2px solid red" : "2px solid rgb(10,10,10)"}}
+            type={type ? type:"text"}
+            name={name}
         />
 
     </div>

@@ -7,8 +7,13 @@ import Switch from "../components/Switch/Switch";
 export default function InputsDemo() {
   const [inputFieldValue, setInputFieldValue] = useState({
     normal: "",
-    withError: ""
+    withNumber: "",
+    withError: "",
   });
+
+  const onChange= (e)=>{
+    setInputFieldValue({ ...inputFieldValue, [e.target.name]: e.target.value });
+  }
 
   return (
     <div className="App__Section">
@@ -51,20 +56,22 @@ export default function InputsDemo() {
           <p className="App__demoTitle">Input Text Field</p>
           <InputField
             placeholder="Placeholder"
+            name="normal"
             value={inputFieldValue.normal}
-            onChange={(e) =>
-              setInputFieldValue({ ...inputFieldValue, normal: e.target.value })
-            }
+            onChange={onChange}
+          />
+          <InputField
+            type="number"
+            placeholder="With number"
+            name="withNumber"
+            value={inputFieldValue.withNumber}
+            onChange={onChange}
           />
           <InputField
             placeholder="With error"
             value={inputFieldValue.withError}
-            onChange={(e) =>
-              setInputFieldValue({
-                ...inputFieldValue,
-                withError: e.target.value
-              })
-            }
+            name="withError"
+            onChange={onChange}
             error={true}
           />
         </div>
