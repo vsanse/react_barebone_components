@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Checkbox from "../components/Checkbox/Checkbox";
+import InputField from "../components/InputField/InputField";
 import Radio from "../components/Radio/Radio";
 import Switch from "../components/Switch/Switch";
 
 export default function InputsDemo() {
+  const [inputFieldValue, setInputFieldValue] = useState({
+    normal: "",
+    withError: ""
+  });
+
   return (
     <div className="App__Section">
       <p className="App__Section--title">Inputs</p>
@@ -41,6 +47,28 @@ export default function InputsDemo() {
             Sample Radio 2
           </Radio>
         </div>
+        <div>
+          <p className="App__demoTitle">Input Text Field</p>
+          <InputField
+            placeholder="Placeholder"
+            value={inputFieldValue.normal}
+            onChange={(e) =>
+              setInputFieldValue({ ...inputFieldValue, normal: e.target.value })
+            }
+          />
+          <InputField
+            placeholder="With error"
+            value={inputFieldValue.withError}
+            onChange={(e) =>
+              setInputFieldValue({
+                ...inputFieldValue,
+                withError: e.target.value
+              })
+            }
+            error={true}
+          />
+        </div>
+        <div />
       </div>
     </div>
   );

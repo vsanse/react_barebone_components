@@ -7,6 +7,7 @@ import InputsDemo from "./demos/InputsDemo";
 import SelectDemo from "./demos/SelectDemo";
 import ModalsDemo from "./demos/ModalsDemo";
 import ButtonsDemo from "./demos/ButtonsDemo";
+import SkeletonDemo from "./demos/SkeletonDemo";
 
 export default function App() {
   return (
@@ -39,6 +40,8 @@ export default function App() {
       <InputsDemo />
       {/* Toasts */}
       <ToastDemo />
+      {/* Skeletons */}
+      <SkeletonDemo />
     </div>
   );
 }

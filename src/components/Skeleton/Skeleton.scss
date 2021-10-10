@@ -1,0 +1,25 @@
+.app__skeleton {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #ebeff2 8%, #f9fafb 18%, #ebeff2 33%);
+  background-size: 200% 100%;
+  position: relative;
+
+  &--content {
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
