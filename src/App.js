@@ -7,6 +7,7 @@ import InputsDemo from "./demos/InputsDemo";
 import SelectDemo from "./demos/SelectDemo";
 import ModalsDemo from "./demos/ModalsDemo";
 import ButtonsDemo from "./demos/ButtonsDemo";
+import SkeletonDemo from "./demos/SkeletonDemo";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <div className="App__Section">
         <p className="App__Section--title">Get the code from</p>
         <a
-          href="https://codesandbox.io/s/react-barebone-components-zvvw1"
+          href="https://codesandbox.io/s/react-barebone-components-e7urk"
           target="__blank"
         >
           Codesandbox
@@ -25,6 +26,12 @@ export default function App() {
           target="__blank"
         >
           Github
+        </a>
+        <br />
+        <br />
+        <p className="App__Section--title">Or Get Demo at</p>
+        <a href="https://reactbarebones.netlify.app/" target="__blank">
+          React Barebones Demo
         </a>
       </div>
       {/* Buttons */}
@@ -39,6 +46,8 @@ export default function App() {
       <InputsDemo />
       {/* Toasts */}
       <ToastDemo />
+      {/* Skeletons */}
+      <SkeletonDemo />
     </div>
   );
 }

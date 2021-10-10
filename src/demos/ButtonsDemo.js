@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../components/Button/Button";
+import RippleButton from "../components/RippleButton/RippleButton";
 
 export default function ButtonsDemo() {
   return (
@@ -22,6 +23,12 @@ export default function ButtonsDemo() {
         <Button type="hollow" danger shape="round">
           Danger Primary Button
         </Button>
+        <RippleButton type="primary" shape="round">
+          Ripple Button
+        </RippleButton>
+        <RippleButton type="primary" danger shape="round">
+          Ripple Button
+        </RippleButton>
       </div>
     </div>
   );
