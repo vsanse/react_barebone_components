@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import Checkbox from "../components/Checkbox/Checkbox";
 import InputField from "../components/InputField/InputField";
+import NumberField from "../components/NumberField/NumberField";
 import Radio from "../components/Radio/Radio";
 import Switch from "../components/Switch/Switch";
 
 export default function InputsDemo() {
   const [inputFieldValue, setInputFieldValue] = useState({
     normal: "",
-    withError: ""
+    withError: "",
+    number:0
   });
+
+
 
   return (
     <div className="App__Section">
@@ -62,10 +66,15 @@ export default function InputsDemo() {
             onChange={(e) =>
               setInputFieldValue({
                 ...inputFieldValue,
-                withError: e.target.value
+                withError: e.target.value,
               })
             }
             error={true}
+          />
+          <NumberField
+            placeholder="Number Placeholder"
+            setInputFieldValue={setInputFieldValue}
+            inputFieldValue={inputFieldValue}
           />
         </div>
         <div />
