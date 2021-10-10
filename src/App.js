@@ -27,6 +27,12 @@ export default function App() {
         >
           Github
         </a>
+        <br />
+        <br />
+        <p className="App__Section--title">Or Get Demo at</p>
+        <a href="https://reactbarebones.netlify.app/" target="__blank">
+          React Barebones Demo
+        </a>
       </div>
       {/* Buttons */}
       <ButtonsDemo />
