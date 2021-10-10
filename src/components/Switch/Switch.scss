@@ -30,3 +30,10 @@
     box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
   }
 }
+.switchBtn {
+  display: flex;
+  align-items: center;
+  label {
+    margin-left: 10px;
+  }
+}
