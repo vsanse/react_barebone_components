@@ -1,7 +1,7 @@
 {
   "name": "react-barebone-components",
   "version": "1.0.0",
-  "description": "The only react library you can use as your own and edit to your heart's content.",
+  "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

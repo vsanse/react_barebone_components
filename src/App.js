@@ -15,7 +15,7 @@ export default function App() {
       <div className="App__Section">
         <p className="App__Section--title">Get the code from</p>
         <a
-          href="https://codesandbox.io/s/react-barebone-components-vv41r"
+          href="https://codesandbox.io/s/react-barebone-components-e7urk"
           target="__blank"
         >
           Codesandbox
