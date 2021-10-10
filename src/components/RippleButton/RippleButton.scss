@@ -1,0 +1,20 @@
+.ripple__btn{
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color:transparent !important;
+    span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 1200ms linear;
+        background-color: rgba(56, 56, 56, 0.4);
+    }  
+}
+
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
