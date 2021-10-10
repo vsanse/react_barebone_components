@@ -1,9 +1,11 @@
+import Button from "../Button/Button";
 import "./RippleButton.scss";
 
 const RippleButton = ({ onClick, type, danger, shape, children, ...rest }) => {
 
     function createRipple(event) { 
         const button = event.currentTarget;
+        button.classList.add("ripple__btn")
         const circle = document.createElement("span");
         const diameter = Math.max(button.clientWidth, button.clientHeight);
         const radius = diameter / 2;
@@ -28,15 +30,9 @@ const RippleButton = ({ onClick, type, danger, shape, children, ...rest }) => {
     }
 
     return (
-        <button
-        className={`ripple__btn app__btn app__btn--${type || "default"} ${
-          danger ? "danger" : ""
-        } app__btn--${shape ? shape : ""}`}
-        {...rest}
-        onClick={ createRipple }
-      >
-        {children}
-      </button>
+        <Button onClick={createRipple} {...{ type, danger, shape, children, ...rest} }  >
+          Ripple Button
+        </Button>
     )
 }
 
