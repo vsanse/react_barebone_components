@@ -1,7 +1,6 @@
 ## REACT BAREBONE COMPONENTS
-
-	React Barebone components is a UI library for ReactJS bootstrapped apps.
-	The main motive to enhance this library is to give freedom to developer to use it as his own and edit to your heart's content 💖
+React Barebone components is a UI library for ReactJS bootstrapped apps.
+The main motive to enhance this library is to give freedom to developer to use it as his own and edit to your heart's content 💖
 
 ### How to contribute ?🤔
 ##### Note: Before working on, check the codesandbox for a full view of project: [https://codesandbox.io/s/react-barebone-components-e7urk](https://codesandbox.io/s/react-barebone-components-e7urk)
@@ -23,10 +22,10 @@ npm start
 - Write some good code, take a sip of coffee then write some more effective code. Make sure you test all the things you've changes and there should be no errors/warnings in console.
 
 *Key points to be noticed while building new features or making improvements in existing components:*
-        a.) Add Reusable components under under src/components folder.
-        b.) If you have build a new component, make sure to showcase it in demo/demo.js file maintaining the stability with other components there.
+ - a.) Add Reusable components under under src/components folder.
+ - b.) If you have build a new component, make sure to showcase it in demo/demo.js file maintaining the stability with other components there.
 
-- After that you have made changes in code and tested all the things, just run basic git commands to push those changes to your forked repository:
+After that you have made changes in code and tested all the things, just run basic git commands to push those changes to your forked repository:
 
 ```bash
 git add .
