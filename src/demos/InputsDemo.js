@@ -9,10 +9,8 @@ export default function InputsDemo() {
   const [inputFieldValue, setInputFieldValue] = useState({
     normal: "",
     withError: "",
-    number:0
+    number: 0
   });
-
-
 
   return (
     <div className="App__Section">
@@ -23,6 +21,7 @@ export default function InputsDemo() {
           <Switch
             onChange={(isChecked) => console.log(isChecked)}
             defaultValue={true}
+            icon={"😊"}
           />
         </div>
         <div>
@@ -66,7 +65,7 @@ export default function InputsDemo() {
             onChange={(e) =>
               setInputFieldValue({
                 ...inputFieldValue,
-                withError: e.target.value,
+                withError: e.target.value
               })
             }
             error={true}

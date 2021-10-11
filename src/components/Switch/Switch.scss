@@ -10,30 +10,42 @@
   height: 14px;
   cursor: pointer;
   background-color: #E7E7E7;
+  position: relative;
   &:checked{
     background-color: #4285f4;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: -3px;
-    left: 0;
-    background: #fff;
-    border-radius: 50%;
-    transition: all 0.1s;
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  }
-  &:checked:after {
-    transform: translateX(100%);
-    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
   }
 }
 .switchBtn {
   display: flex;
   align-items: center;
+  position: relative;
   label {
     margin-left: 10px;
+  }
+  .switch__thumb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.1s;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &--icon {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+  .app__switch:checked + .switch__thumb {
+    transform: translateX(100%) translateY(-50%);
+    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
   }
 }
