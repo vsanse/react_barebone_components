@@ -7,6 +7,12 @@ today! As a contributor, here are the guidelines we would like you to follow:
  - [Issues and Bugs](#issue)
  - [Feature Requests](#feature)
 
+### Code of conduct
+- Be kind to everyone here, help each other, we all are here for learning.
+- Make sure your create quality pull requests and issues to get "hacktober-accepted" label, so that it will get counted in your hacktober profile and make you eligible to get goodies.
+- Try building things from scratch, we will use near to negligible third party libraries so that we really understand how our project is working. However, if we ever feel that we have to use some other library we will do it.
+- Feel free to take inspiration and help from web and other projects and think how we can improve and optimize it more.
+- If you don't know ReactJs, you can still contribute by making icons, logo, documentation, graphic designing etc. These all will be counted as contribution in your profile for sure.
 
 ## <a name="question"></a> Got a Question or Problem?
 
