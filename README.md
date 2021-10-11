@@ -38,4 +38,4 @@ git push -u orign <branch-name"
 - Now open your forked repository in github ui, there must be an alert informing you about your branch has commits. Click on the compare & pull request button, put  title and description accordingly, mention issue number if you were working on any pre defined issue.
 -  Wait for the review of your pull request and you are all set to move further with it.
 
-Please go through CONTRIBUTING.md once also. Thanking you😸
+Please go through [CONTRIBUTING.md](/CONTRIBUTING.md)  once also. Thanking you😸
