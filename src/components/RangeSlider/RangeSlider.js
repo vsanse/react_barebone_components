@@ -8,14 +8,24 @@ export default function RangeSlider({
   min,
   max
 }) {
+  let rangeMin = min || 0;
+  let rangeMax = max || 100;
   return (
-    <input
-      value={value}
-      onChange={onChange}
-      type="range"
-      min={min || 0}
-      max={max || 100}
-      className={`app__rangeSlider ${customClass || ""}`}
-    />
+    <div className={`app__rangeSliderWrapper ${customClass || ""}`}>
+      <input
+        value={value}
+        onChange={onChange}
+        type="range"
+        min={rangeMin}
+        max={rangeMax}
+        className={`app__rangeSlider`}
+      />
+      <span
+        className="app__rangeSlider--trackFiller"
+        style={{
+          width: `${(value * 100) / rangeMax}%`
+        }}
+      />
+    </div>
   );
 }
