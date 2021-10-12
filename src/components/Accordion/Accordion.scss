@@ -1,0 +1,66 @@
+$accent-color: #45ADA8;
+$text-padding: 25px;
+
+input.accordion {
+    // Hide checkbox
+    appearance: none;
+    left: -100%;
+    position: absolute;
+    top: -100%;
+
+    // Style the label text
+    & + label {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: $text-padding;
+        
+        // Add the '+' sign
+        span::before { 
+            color: $accent-color;
+            content: '\002B';
+            position: absolute;
+            left: 0px;
+        }
+    }
+  
+    // Hide the article if the checkbox is unchecked
+    & ~ article {
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 5px;
+        padding-left: $text-padding;
+        transition: height 500ms ease,
+                opacity 500ms ease;
+    }
+  
+    &:checked {
+        // Add the 'x' sign to each expanded dropdown item
+        & + label span::before { content: '\00D7'; }
+    
+        // Show the article if the checkbox is checked
+        & ~ article {
+            height: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+// Main content styling
+main {
+    height: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 { font-size: 30px; }
+
+section {
+    border-bottom: 1px solid $accent-color;
+    padding-top: 30px;
+    position: relative;
+
+  &:first-of-type { padding-top: 0; }
+}

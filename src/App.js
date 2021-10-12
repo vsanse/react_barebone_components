@@ -8,6 +8,7 @@ import SelectDemo from "./demos/SelectDemo";
 import ModalsDemo from "./demos/ModalsDemo";
 import ButtonsDemo from "./demos/ButtonsDemo";
 import SkeletonDemo from "./demos/SkeletonDemo";
+import Accordion from "./demos/AccordionDemo";
 
 export default function App() {
   return (
@@ -48,6 +49,8 @@ export default function App() {
       <ToastDemo />
       {/* Skeletons */}
       <SkeletonDemo />
+      {/* Accordion */}
+      <Accordion />
     </div>
   );
 }
