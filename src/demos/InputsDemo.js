@@ -3,6 +3,7 @@ import Checkbox from "../components/Checkbox/Checkbox";
 import InputField from "../components/InputField/InputField";
 import NumberField from "../components/NumberField/NumberField";
 import Radio from "../components/Radio/Radio";
+import RangeSlider from "../components/RangeSlider/RangeSlider";
 import Switch from "../components/Switch/Switch";
 
 export default function InputsDemo() {
@@ -11,6 +12,8 @@ export default function InputsDemo() {
     withError: "",
     number: 0
   });
+
+  const [sliderValue, setSliderValue] = useState(0);
 
   return (
     <div className="App__Section">
@@ -49,6 +52,17 @@ export default function InputsDemo() {
           >
             Sample Radio 2
           </Radio>
+        </div>
+        <div>
+          <p className="App__demoTitle">Range Slider</p>
+          <div className="flex alignCenter">
+            <RangeSlider
+              customClass="flex1"
+              value={sliderValue}
+              onChange={(e) => setSliderValue(e.target.value)}
+            />
+            <span>&nbsp;&nbsp;{sliderValue}</span>
+          </div>
         </div>
         <div>
           <p className="App__demoTitle">Input Text Field</p>

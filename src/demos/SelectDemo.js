@@ -21,7 +21,7 @@ export default function SelectDemo() {
         </div>
         <div>
           <p className="App__demoTitle">Dropdown Autosuggest</p>
-          <AutoSuggest options={DATA} defaultOption={0} autoFocus={true} />
+          <AutoSuggest options={DATA} defaultOption={0} autoFocus={false} />
         </div>
       </div>
     </div>

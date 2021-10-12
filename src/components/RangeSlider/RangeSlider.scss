@@ -1,0 +1,46 @@
+.app__rangeSlider {
+	-webkit-appearance: none;
+	width: 100%;
+  height: 6px;
+  border-radius: 10px;
+	background: transparentize($color: #ccc, $amount: 0.5);
+	outline: none;
+	-webkit-transition: .2s;
+	-webkit-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	position: relative;
+	z-index: 1;
+	// &:hover {
+	// 	opacity: 1;
+	// }
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background: blue;
+    cursor: pointer;
+		border-radius: 50%;
+	}
+	&::-moz-range-thumb {
+		width: 20px;
+    height: 20px;
+    border-radius: 50%;
+		background: blue;
+		cursor: pointer;
+		box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	}
+	&--trackFiller {
+		display: inline-block;
+		height: 6px;
+		border-radius: 10px;
+		background-color: blue;
+		position: absolute;
+		left: 0;
+		top: 8px;
+	}
+}
+.app__rangeSliderWrapper {
+	position: relative;
+}
