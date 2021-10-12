@@ -5,10 +5,8 @@ const NumberField = ({
   error,
   placeholder,
   setInputFieldValue,
-  inputFieldValue,
+  inputFieldValue
 }) => {
-
-
   return (
     <div className="number_wrapper">
       <label style={{ bottom: "32px", opacity: 0.9, color: "grey" }}>
@@ -17,18 +15,21 @@ const NumberField = ({
 
       <input
         onChange={(e) => {
-          if(e.target.value==""){
-            return setInputFieldValue({...inputFieldValue,number: 0})
+          if (e.target.value == "") {
+            return setInputFieldValue({ ...inputFieldValue, number: 0 });
+          } else if (e.target.value == parseInt(e.target.value)) {
+            setInputFieldValue({
+              ...inputFieldValue,
+              number: parseInt(e.target.value)
+            });
           }
-          else if(e.target.value==parseInt(e.target.value)){
-          setInputFieldValue({...inputFieldValue,number: parseInt(e.target.value)});
-        }}}
+        }}
         value={inputFieldValue.number}
         style={{
           borderBottom:
             error && !inputFieldValue.number
-              ? "2px solid red"
-              : "2px solid rgb(10,10,10)",
+              ? "1px solid red"
+              : "1px solid rgb(10,10,10)"
         }}
       />
       <div className="arrows">
@@ -36,7 +37,7 @@ const NumberField = ({
           onClick={(e) =>
             setInputFieldValue({
               ...inputFieldValue,
-              number: inputFieldValue.number + 1,
+              number: inputFieldValue.number + 1
             })
           }
         >
@@ -47,7 +48,7 @@ const NumberField = ({
           onClick={(e) =>
             setInputFieldValue({
               ...inputFieldValue,
-              number: inputFieldValue.number - 1,
+              number: inputFieldValue.number - 1
             })
           }
         >
@@ -58,6 +59,6 @@ const NumberField = ({
   );
 };
 NumberField.defaultProps = {
-  arrows: true,
+  arrows: true
 };
 export default NumberField;
