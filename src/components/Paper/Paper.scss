@@ -1,0 +1,11 @@
+.paper__wrapper{
+    // width: 300px;
+    // height: 300px;
+    padding: 16px 10px;
+    border-radius: 4px;
+    margin: 18px;
+    &.paper__dark{
+        background: rgb(66, 66, 66);
+        color: rgb(224, 224, 224);
+    }
+}
