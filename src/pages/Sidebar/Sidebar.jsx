@@ -21,7 +21,7 @@ const Sidebar = ({ setSelectedComponentIndex }) => {
                 <div>
                     Contribute and improve <br />
                     <b>React Barebones</b>
-                    <br /> here
+                    <br /> <a href="https://github.com/vsanse/react_barebone_components">here</a>
                 </div>
             </div>
         </div>
