@@ -1,0 +1,51 @@
+.Sidebar{
+    height: calc( 100vh - 36px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 16px;
+    position: sticky;
+    top: 5px;
+    background: rgba(224, 240, 231,0.6);
+    &--title{
+        font-size: smaller;
+        background: rgb(184, 233, 208);
+        color: rgb(28, 105, 28);
+        padding: 8px;
+        border-left: 4px solid rgb(28, 105, 28);
+    }
+
+    &--componentIndex{
+        margin-top: 12px;
+        padding: 6px;
+    }
+
+    &--eachComponentSelector{
+        margin-top: 14px;
+        padding: 16px 8px;
+        border: 1px solid rgba(28, 105, 28,0.2);
+        border-radius: 2px;
+        font-size: small;
+        transition: 0.35s;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid rgba(28, 105, 28,0.8);
+            color: rgb(12, 59, 12);
+        }
+    }
+
+    &--invitationMessage{
+        margin-top: 14px;
+        padding: 12px 8px;
+        text-align: center;
+        >div:nth-child(1){
+            font-size: smaller;
+        }
+        >div:nth-child(2){
+            font-size: small;
+            color: rgb(28, 105, 28);
+            cursor: pointer;
+            text-decoration: underline rgb(28, 105, 28);
+        }
+    }
+}
