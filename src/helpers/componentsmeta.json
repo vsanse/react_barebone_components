@@ -1,0 +1,26 @@
+[
+    {
+        "componentname": "Buttons"
+    },
+    {
+        "componentname": "Modals"
+    },
+    {
+        "componentname": "Select"
+    },
+    {
+        "componentname": "Spinner"
+    },
+    {
+        "componentname": "Inputs"
+    },
+    {
+        "componentname": "Toasts"
+    },
+    {
+        "componentname": "Skeleton"
+    },
+    {
+        "componentname": "Paper Container"
+    }
+]

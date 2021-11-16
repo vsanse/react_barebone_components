@@ -1,0 +1,25 @@
+.Preview{
+    position: relative;
+    &--copyBtn{
+        position: absolute;
+        z-index: 1;
+        right: 6px;
+        top: 26px;
+        background: rgb(226, 226, 226);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 4px;
+        border-radius: 4px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 8px 12px 1px rgba(0,0,0,0.1);
+            background: rgb(243, 243, 243);
+        }
+    }
+    &--code{
+        margin-top: 12px;
+        max-height: calc(100vh - 400px);
+        overflow-y: scroll;
+        border-radius: 4px;
+    }
+}
